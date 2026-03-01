@@ -27,7 +27,7 @@ with sr.Microphone() as source:
         try:
             print("\nDinleniyor... (Listening)")
             audio = recog.listen(source, phrase_time_limit=3)
-            text = recog.recognize_google(audio).lower()
+            text = recog.recognize_google(audio, language= "tr-TR").lower()
             print(f"Heard: {text}")
 
             # Improved Logic with alias lists
@@ -43,7 +43,7 @@ with sr.Microphone() as source:
             elif "whatsapp" in text:
                 open_image_windows(whatsapp_image)
                 
-            elif "close" in text or "kapat" in text:
+            elif "close" in text or "ses tanımayı durdur" in text:
                 os.system("taskkill /f /im Microsoft.Photos.exe /t >nul 2>&1")
 
         except sr.UnknownValueError:
