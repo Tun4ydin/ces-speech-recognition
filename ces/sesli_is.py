@@ -3,10 +3,10 @@ import subprocess
 import os
 import time
 
-insta_image = "/Users/tunaaydin/Desktop/KOD/Kod Testbn/VScode Folder/ces/insta_image.jpeg"
-x_image = "/Users/tunaaydin/Desktop/KOD/Kod Testbn/VScode Folder/ces/x_image.jpeg"
-linkedin_image = "/Users/tunaaydin/Desktop/KOD/Kod Testbn/VScode Folder/ces/linkedin_image.jpeg"
-whatsapp_image = "/Users/tunaaydin/Desktop/KOD/Kod Testbn/VScode Folder/ces/whatsapp_image.jpeg"
+insta_image = "/ces/insta_image.jpeg"
+x_image = "/ces/x_image.jpeg"
+linkedin_image = "/ces/linkedin_image.jpeg"
+whatsapp_image = "/ces/whatsapp_image.jpeg"
 
 def close_picture():
     os.system("pkill Preview")
