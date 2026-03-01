@@ -9,6 +9,7 @@ linkedin_image = "/ces/linkedin_image.jpeg"
 whatsapp_image = "/ces/whatsapp_image.jpeg"
 
 def close_picture():
+    #Preview mac a özel olarak algınabilir uygulama olduğundan
     os.system("pkill Preview")
 
 recog = sr.Recognizer()
