@@ -36,7 +36,7 @@ with sr.Microphone() as source:
                 print("dinleniyor. ")
                 audio = recog.listen(source)
 
-                text = text = recog.recognize_google(audio).lower()
+                text = text = recog.recognize_google(audio, language= "tr-TR").lower()
                 print(text)
 
                 if "instagram" in text or "insta" in text:
@@ -51,5 +51,9 @@ with sr.Microphone() as source:
                 
                 elif "whatsapp" in text:
                     open_image(whatsapp_image)
-            except:
-                print("anlaşılamaz")
+
+                elif "stop voice recognition" in text or "ses tanımayı durdur" in text:
+                    break
+            except sr.UnknownValueError:
+                pass
+print("durduruluyor...")
